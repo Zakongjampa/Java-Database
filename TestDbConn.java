@@ -17,11 +17,9 @@ public class TestDbConn {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url, username, password);
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             System.out.println("Unable to connect to JDBC/ODBC driver" + e);
             System.exit(1);
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             System.out.println("Can not connect to the database");
             System.exit(2);
         }
@@ -30,9 +28,7 @@ public class TestDbConn {
             String query = "show tables;";
             statement = con.createStatement();
             result = statement.executeQuery(query);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            
+        } catch (SQLException e) {            
             System.exit(3);
         }
 
@@ -48,7 +44,6 @@ public class TestDbConn {
                 }while(result.next());
             }
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

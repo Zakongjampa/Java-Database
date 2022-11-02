@@ -17,10 +17,8 @@ public class TestConnection{
             Class.forName("com.mysql.cj.jdbc.Driver");
             db = DriverManager.getConnection(url, username, password);
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         try{
